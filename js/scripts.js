@@ -1,28 +1,9 @@
-var result = " "
+var threes = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99];
+var ones = [1, 10, 11, 13, 14, 16, 17, 19, 31, 41, 61, 71, 91, 100];
+var zeros = [0, 20, 40, 50, 70, 80];
 
-var underScores = function(string) {
-  var addTheUnders = 3 - string.length;
-  for (var i = 0; i<addTheUnders; i++) {
-    string= "_" + string;
-    console.log(string);
-  };
+var result = 60;
 
-var pos0 = parseInt(string.charAt(0));
-var pos1 = parseInt(string.charAt(1));
-var pos2 = parseInt(string.charAt(2));
-
-console.log(pos0);
-console.log(pos1);
-console.log(pos2);
-
-};
-
-$(document).ready(function() {
-  $("#form").submit(function(event) {
-    event.preventDefault();
-    result = "";
-    var input = ($("#input").val());
-    underScores(input);
-    $("#result").text(result);
-  });
-});
+if (result === threes) {
+  document.write("Yay it worked")
+}
