@@ -1,3 +1,6 @@
+
+
+// BACK END
 var result = " "
  var underScores = function(string) {
   var addTheUnders = 3 - string.length;
@@ -13,21 +16,32 @@ console.log(pos0);
 console.log(pos1);
 console.log(pos2);
 
-var one = /[1]/
-var zero = /[0]/
-if (pos0 === "0"|| pos1 === "0" || pos2 === "0") {
-  document.print("true");
+var splits = input.split("");
+
+splits.forEach(function(split, index) {
+  if (split === "0") {
+    splits[index] = "beep"
+  } else {
 }
-console.log(string)
+
+var result = " "
+ var underScores = function(string) {
+  var addTheUnders = 3 - string.length;
+  for (var i = 0; i<addTheUnders; i++) {
+    string= "_" + string;
+    console.log(string);
+  };
+};
+});
 };
 
-
- $(document).ready(function() {
-  $("#form").submit(function(event) {
-    event.preventDefault();
-    result = "";
-    var input = ($("#input").val());
-    underScores(input);
-    $("#result").text(result);
-  });
+// FRONT END
+$(document).ready(function() {
+ $("#form").submit(function(event) {
+   event.preventDefault();
+   result = "";
+   var input = ($("#input").val());
+   underScores(input);
+   $("#result").text(splits.join(""));
+ });
 });
