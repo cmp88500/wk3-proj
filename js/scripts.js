@@ -9,13 +9,16 @@ function generate(num) {
 
 
 function change(number) {
-  var numbers2 = [];
   var string = number.toString();
-  var breaker = string.slice();
-  var zero = breaker.includes("0");
-  var one = breaker.includes("1");
+  var zero = string.includes("0");
+  var one = string.includes("1");
 
-  if (one === true) {
+  if (number % 3 === 0) {
+    var sorry = string.replace(number, "I'm sorry, Dave. I'm afraid I can't do that.");
+    console.log(sorry);
+    return sorry
+  }
+  else if (one === true) {
     var boop = string.replace(number, "boop");
     console.log(boop);
     return boop
