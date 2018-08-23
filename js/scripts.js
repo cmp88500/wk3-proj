@@ -15,7 +15,12 @@ function change(number) {
   var zero = breaker.includes("0");
   var one = breaker.includes("1");
 
-  if (zero === true) {
+  if (one === true) {
+    var boop = string.replace(number, "boop");
+    console.log(boop);
+    return boop
+  }
+  else if (zero === true) {
     var beep = string.replace(number, "beep");
     console.log(beep);
     return beep
@@ -29,3 +34,4 @@ function change(number) {
 change(10);
 change(20);
 change(32);
+change(21);
