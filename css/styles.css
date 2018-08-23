@@ -1,0 +1,12 @@
+body {
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+#result {
+  height: 300px;
+  overflow: scroll;
+}

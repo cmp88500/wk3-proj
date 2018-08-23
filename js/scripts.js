@@ -4,7 +4,7 @@
 
     for (var i=0; i <= num; i++) {
       if (i % 3 === 0) {
-        numbers.splice(i, 0, "Sorry");
+        numbers.splice(i, 0, "I'm sorry, Dave. I'm afraid I can't do that.");
       }
       else if (i.toString().includes("1")) {
         numbers.splice(i, 0, "Boop!");
