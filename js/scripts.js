@@ -8,12 +8,13 @@ function generate(num) {
   var one = string.includes("1");
   var numbers = [];
   for (var i = -1; i <= num; i++) {
-    if (i % 3 === 0) {
-      numbers.splice(i + 1, 0, "Sorry"); }
-    else {
-      numbers.push(i + 1);
-    }
-    console.log(numbers);
+    console.log(i, i % 3);
+//     if (i % 3 === 0) {
+//       numbers.splice(i + 1, 0, "Sorry"); }
+//     else {
+//       numbers.push(i + 1);
+//     }
+//     console.log(numbers);
   }
 }
 
