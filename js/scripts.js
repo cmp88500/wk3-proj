@@ -14,7 +14,8 @@ function change(number) {
   var string = number.toString();
   var breaker = string.slice();
   var zero = breaker.includes("0");
-  console.log(zero)
+  var one = breaker.includes("1");
+  console.log(zero, one)
 }
 
 change(20);
