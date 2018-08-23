@@ -6,8 +6,7 @@ function generate(num) {
   }
     return numbers
   }
-generate(15);
-generate(5);
+
 
 function change(number) {
   var numbers2 = [];
@@ -15,10 +14,18 @@ function change(number) {
   var breaker = string.slice();
   var zero = breaker.includes("0");
   var one = breaker.includes("1");
-  console.log(zero, one)
+
+  if (zero === true) {
+    var beep = string.replace(number, "beep");
+    console.log(beep);
+    return beep
+  }
+  else {
+    console.log(number);
+    return number
+  }
 }
 
+change(10);
 change(20);
-change(25);
-change(0);
-change(1);
+change(32);
