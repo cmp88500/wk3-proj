@@ -5,13 +5,12 @@
 function generate(num) {
   var numbers = [];
   var string = num.toString();
-  var splitter = string.split();
-  var zero = splitter.includes("0");
-  var one = splitter.includes("1");
+  var zero = string.includes("0");
+  var one = string.includes("1");
   for (var i = 0; i <= num; i++) {
     if (i % 3 === 0) {
       numbers.splice(i, 0, "Sorry"); }
-    else if (one === true) {
+    else if ((i % 3 !== 0) && (one === true)) {
       numbers.splice(i, 0, "boop");
     }
     else if (zero === true) {
@@ -24,7 +23,7 @@ function generate(num) {
   }
 }
 
-generate(12);
+generate(9);
 
 
 
