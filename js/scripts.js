@@ -1,5 +1,5 @@
 //BUSINESS LOGIC
-function generate(num) {
+var generate = function(num) {
   var numbers = [];
   var string = num.toString();
   var zero = string.includes("0");
@@ -19,7 +19,8 @@ function generate(num) {
     numbers.push(i);
     }
     }
-    console.log(numbers)
+    console.log(numbers);
+    return numbers;
   }
 
 generate(48);
@@ -29,8 +30,9 @@ $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
     var input = parseInt($("#input").val());
-    var result = generate(input);
-    console.log(result)
-    $("ul#result").append("<li><span class='list'>" + result + "</span></li>")
+    var loops = generate(input);
+    loops.forEach(function(loop) {
+    $("#result").append("<li><span class='list'>" + loop + "</span></li>")
+  });
 });
 });
