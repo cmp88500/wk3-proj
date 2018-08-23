@@ -5,11 +5,18 @@
 function generate(num) {
   var numbers = [];
   var string = num.toString();
-  var zero = string.includes("0");
-  var one = string.includes("1");
+  var splitter = string.split();
+  var zero = splitter.includes("0");
+  var one = splitter.includes("1");
   for (var i = 0; i <= num; i++) {
     if (i % 3 === 0) {
       numbers.splice(i, 0, "Sorry"); }
+    else if (one === true) {
+      numbers.splice(i, 0, "boop");
+    }
+    else if (zero === true) {
+      numbers.splice(i, 0, "beep");
+    }
     else {
       numbers.push(i);
     }
@@ -17,7 +24,7 @@ function generate(num) {
   }
 }
 
-generate(15);
+generate(12);
 
 
 
