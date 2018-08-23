@@ -3,18 +3,17 @@
 
 
 function generate(num) {
+  var numbers = [];
   var string = num.toString();
   var zero = string.includes("0");
   var one = string.includes("1");
-  var numbers = [];
-  for (var i = -1; i <= num; i++) {
-    console.log(i, i % 3);
-//     if (i % 3 === 0) {
-//       numbers.splice(i + 1, 0, "Sorry"); }
-//     else {
-//       numbers.push(i + 1);
-//     }
-//     console.log(numbers);
+  for (var i = 0; i <= num; i++) {
+    if (i % 3 === 0) {
+      numbers.splice(i, 0, "Sorry"); }
+    else {
+      numbers.push(i);
+    }
+    console.log(numbers);
   }
 }
 
